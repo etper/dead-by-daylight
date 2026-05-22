@@ -5,7 +5,6 @@
 #
 ### Interaction Systems
 #
-#* Generator repair
 #* Healing
 #* Totem cleansing
 #* Chest searching
