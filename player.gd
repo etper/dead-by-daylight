@@ -140,7 +140,7 @@ func uncrouch():
 
 func _on_heal_area_body_entered(body):
 
-	if body != self and body.name == "Player":
+	if body != self and body is CharacterBody3D:
 		nearby_player = body
 		print("ENTERED AREA: ", body.name)
 
