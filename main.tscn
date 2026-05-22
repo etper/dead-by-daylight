@@ -22,6 +22,10 @@ shape = SubResource("BoxShape3D_ig7tw")
 [node name="Player" parent="." unique_id=2024910709 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.31512642, 1.0302658, 0.07598686)
 
+[node name="Player2" parent="." unique_id=1765421124 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7076283, 1.0302658, -3.4030724)
+is_dummy = true
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1074682427]
 transform = Transform3D(1, 0, 0, 0, -0.35115534, 0.9363172, 0, -0.9363172, -0.35115534, 0, 23.144346, 0)
 

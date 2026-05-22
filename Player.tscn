@@ -6,6 +6,8 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kne1u"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_xhfnw"]
+
 [node name="Player" type="CharacterBody3D" unique_id=2024910709]
 script = ExtResource("1_xhfnw")
 
@@ -19,3 +21,12 @@ shape = SubResource("CapsuleShape3D_kne1u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36281836, 1.3773539)
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=48838655]
+
+[node name="HealArea" type="Area3D" parent="." unique_id=69289239]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HealArea" unique_id=571967952]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_xhfnw")
+
+[connection signal="body_entered" from="HealArea" to="." method="_on_heal_area_body_entered"]
+[connection signal="body_exited" from="HealArea" to="." method="_on_heal_area_body_exited"]
